@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+li{
+  list-style: none;
+}
+#app {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+}
