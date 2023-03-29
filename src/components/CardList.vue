@@ -25,7 +25,6 @@ const items: { id: number, title: string, text: string }[] = [
 <style lang="scss" scoped>
 .cardList {
     display: flex;
-    // justify-content: space-around;
     padding-inline: 55px;
     flex-wrap: wrap;
 
@@ -37,9 +36,6 @@ const items: { id: number, title: string, text: string }[] = [
         min-width: 150px;
         margin-right: 2rem;
         text-align: left;
-        // &:last-child {
-        //     margin-right: 0;
-        // }
     }
 
     .cardHeader {
@@ -48,6 +44,7 @@ const items: { id: number, title: string, text: string }[] = [
         z-index: 2;
         max-width: 36px;
 
+        //內文標題右下角圓圈設定start
         &::before {
             content: "";
             box-sizing: border-box;
@@ -61,6 +58,7 @@ const items: { id: number, title: string, text: string }[] = [
             right: -12px;
         }
 
+        //內文標題右下角圓圈設定end
         p {
             font-weight: 700;
             font-size: 36px;
@@ -77,10 +75,11 @@ const items: { id: number, title: string, text: string }[] = [
     }
 }
 
+//寬度到一定距離後改為橫向排列，避免內文出現過長的長方形排版，不易閱讀
+
 @media(max-width: 1140px) {
     .cardList {
         flex-direction: column;
-
 
         .card {
             padding-top: 50px;
@@ -91,10 +90,7 @@ const items: { id: number, title: string, text: string }[] = [
 }
 
 @media (max-width: 768px) {
-
-
     .card {
-        // flex: 1;
         margin-right: 0;
         max-width: 100%;
     }

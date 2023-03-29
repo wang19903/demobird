@@ -5,6 +5,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: 'Noto Sans';
 }
 li{
   list-style: none;

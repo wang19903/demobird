@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <main>
-      <Menu></Menu>
+      <Menu />
       <div class="rightContainer">
         <div class="bannerContainer">
           <img src="../assets/banner.svg" alt="白頭翁的圖片。Chinese bulbul's picture." />
@@ -10,10 +10,10 @@
             <p>又名白頭鵯。以果實、昆蟲為主食，無法消化小米、穀類。平均壽命約 8~10 年。</p>
           </div>
         </div>
-        <CardList></CardList>
+        <CardList />
       </div>
     </main>
-    <!-- <Footer></Footer> -->
+    <!-- <Footer/> -->
   </div>
 </template>
 
@@ -24,6 +24,7 @@ import Menu from './Menu.vue'
 </script>
 
 <style lang="scss" scoped>
+//最外層設定直向排版、延伸到底，footer就可以置底
 .container {
   display: flex;
   min-height: 100vh;
@@ -32,9 +33,10 @@ import Menu from './Menu.vue'
   width: 100%;
 }
 
+//設計稿寬1440px和375px，作為最大寬度和最小寬度
 main {
   max-width: 1440px;
-  min-width: 320px;
+  min-width: 375px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -43,7 +45,6 @@ main {
 }
 
 .rightContainer {
-  // flex: 3.17;
   flex: 1.7;
   max-width: 1095px;
   display: flex;
@@ -54,7 +55,6 @@ main {
 .bannerContainer {
   position: relative;
 
-  // width: 100%;
   img {
     width: 100%;
     min-height: 311px; //figma 行動版增高
@@ -64,7 +64,6 @@ main {
 
 
   h3 {
-    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -84,7 +83,6 @@ main {
   p {
     color: #fff;
     margin: 0;
-    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

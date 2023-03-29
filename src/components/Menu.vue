@@ -35,12 +35,12 @@ const items: { id: number, title: string }[] = [
     { id: 3, title: '白頭翁的美照' },
     { id: 4, title: '白頭翁的危機' }
 ]
-//觸發class渲染條件:click比對id
+//觸發class渲染條件:click後比對id
 const select = (id: number) => {
     selected.value = id
 }
+//觀察漢堡按鈕，給予class名稱:checked 觸發不同動畫
 watch(isChecked, (newVal) => {
-    console.log(newVal)
     if (burgerBtn.value) {
         burgerBtn.value.classList.toggle('checked', newVal)
     }
@@ -73,6 +73,7 @@ watch(isChecked, (newVal) => {
         white-space: nowrap;
     }
 
+    //LOGO圖案start
     .logoContainer {
         box-sizing: border-box;
         width: 91px;
@@ -88,7 +89,6 @@ watch(isChecked, (newVal) => {
         &::after {
             content: "";
             box-sizing: border-box;
-            display: inline-block;
             width: 4px;
             height: 4px;
             position: absolute;
@@ -112,7 +112,6 @@ watch(isChecked, (newVal) => {
         &:before {
             content: "";
             box-sizing: border-box;
-            display: inline-block;
             width: 50px;
             height: 60px;
             border-bottom: #000 8px solid;
@@ -125,7 +124,6 @@ watch(isChecked, (newVal) => {
         &:after {
             content: "";
             box-sizing: border-box;
-            display: inline-block;
             width: 15px;
             height: 30px;
             border-radius: 0% 100% 0% 0% / 0% 25%;
@@ -137,6 +135,7 @@ watch(isChecked, (newVal) => {
         }
     }
 
+    //LOGO圖案end
     ul {
         padding: 0;
         display: flex;
@@ -160,7 +159,6 @@ watch(isChecked, (newVal) => {
             cursor: pointer;
         }
 
-
         &:hover::after {
             content: '';
             position: absolute;
@@ -183,7 +181,7 @@ watch(isChecked, (newVal) => {
         border-radius: 10px;
     }
 
-    //漢堡選單相關設定
+    //漢堡選單桌面板隱藏start
     .burgerBtnContainer {
         display: none;
     }
@@ -191,19 +189,18 @@ watch(isChecked, (newVal) => {
     #burgerToggle {
         display: none;
     }
+
+    //漢堡選單桌面板隱藏end
 }
 
-
-
 @media (max-width: 768px) {
-
-
     .menu {
         max-width: 100%;
         flex: 0;
         border-bottom: 2px solid rgba(105, 105, 105, .5);
         box-sizing: border-box;
 
+        //漢堡選單設定start
         .burgerBtnContainer {
             display: block;
             width: 35px;
@@ -219,7 +216,7 @@ watch(isChecked, (newVal) => {
                 width: 30px;
 
                 &:after {
-                    //短的
+                    //漢堡選單短的橫槓
                     content: "";
                     position: absolute;
                     height: 5px;
@@ -240,6 +237,7 @@ watch(isChecked, (newVal) => {
                 }
             }
 
+            //漢堡選單三橫槓圖案，使用動畫倒放與時間創造hover波浪效果
             &:hover .burgerBtn:not(.checked) {
                 animation: wave .8s infinite ease;
             }
@@ -259,7 +257,7 @@ watch(isChecked, (newVal) => {
             }
 
             &:hover .burgerBtn:not(.checked):after {
-                //短的
+                //漢堡選單短的橫槓
                 animation: waveSmall .7s infinite ease;
                 animation-delay: .1s;
             }
@@ -294,7 +292,7 @@ watch(isChecked, (newVal) => {
 
             @keyframes waveSmall {
 
-                //短的波浪
+                //漢堡選單短的橫槓波浪效果
                 0% {
                     width: 3px;
                 }
@@ -309,8 +307,8 @@ watch(isChecked, (newVal) => {
             }
         }
 
+        //漢堡選單開關
         #burgerToggle {
-
             &:checked {
                 ~ul {
                     display: flex;
@@ -320,6 +318,7 @@ watch(isChecked, (newVal) => {
             }
         }
 
+        //漢堡選單X圖案
         .burgerBtn {
             &.checked {
                 transform: rotate(45deg) translateX(20px);
@@ -335,13 +334,12 @@ watch(isChecked, (newVal) => {
             }
         }
 
-
+        //漢堡選單設定end
 
         .menuHeader {
             justify-content: space-around;
             padding-top: 0;
         }
-
 
         .h2wrap {
             transform: translateX(20px);
