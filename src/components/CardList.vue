@@ -90,6 +90,10 @@ const items: { id: number, title: string, text: string }[] = [
 }
 
 @media (max-width: 768px) {
+    .cardList {
+        padding-inline: 36px;
+    }
+
     .card {
         margin-right: 0;
         max-width: 100%;

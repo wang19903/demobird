@@ -61,7 +61,7 @@
 
 <style lang="scss" scoped>
 .animation {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: #DCCCBC;
     position: fixed;

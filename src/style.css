@@ -1,10 +1,7 @@
 body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
-  overflow-x: hidden;
   font-family: 'Noto Sans';
 }
 li{
@@ -14,5 +11,6 @@ li{
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  max-width: 1440px;
+  display: flex;
+  justify-content: center;
 }

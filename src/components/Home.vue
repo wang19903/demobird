@@ -31,6 +31,8 @@ import Menu from './Menu.vue'
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  max-width: 1440px;
+  overflow-x: hidden;
 }
 
 //設計稿寬1440px和375px，作為最大寬度和最小寬度
